@@ -27,7 +27,8 @@ async function main() {
 
   // Store the contract addresses in a JSON file for easy access
   const fs = require("fs");
-  fs.writeFileSync("deployedAddresses.json", JSON.stringify(addresses, null, 2));
+  fs.writeFileSync(".env", `CONTRACT_ADDRESS=${addresses.retailCBDC}`);
+  console.log(`Contract addresses written to .env file: ${JSON.stringify(addresses)
 }
 
 main()
